@@ -1,0 +1,66 @@
+/* ==========================================================================
+	 _layout.scss
+	 ========================================================================== */
+
+.l-container,
+.l-row, 
+*[class^="l-col"] {
+  display: block;
+}
+
+.l-container,
+.l-row {
+  @extend %u-clearfix;
+}
+
+.l-container {
+	@include container;
+
+	padding: 0 20px;
+}
+
+.l-hero {
+  height: 400px;
+}
+
+// Generate grid classes
+// NB. Don't put these inside the same
+// loop as they will end up overwriting
+// each other in unwanted ways when applied
+@for $i from 1 through map-get( $susy, columns ) {
+  .l-col-#{$i} {
+    @include span( $i );
+  }
+
+  .l-col-#{$i}-last {
+    @include span( last $i );
+  }
+}
+
+@for $i from 1 through map-get( $susy, columns ) {
+  .l-col-sml-#{$i} {
+    @include respond-to( 'tablet' ) {
+      @include span( $i );
+    }
+  }
+
+  .l-col-sml-#{$i}-last {
+    @include respond-to( 'tablet' ) {
+      @include span( last $i );
+    }
+  }
+}
+
+@for $i from 1 through map-get( $susy, columns ) {
+  .l-col-med-#{$i} {
+    @include respond-to( 'desktop' ) {
+      @include span( $i );
+    }
+  }
+
+  .l-col-med-#{$i}-last {
+    @include respond-to( 'desktop' ) {
+      @include span( last $i );
+    }
+  }
+}
