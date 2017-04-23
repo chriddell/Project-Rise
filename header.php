@@ -23,12 +23,26 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#main-content"><?php _e( 'Skip to content', 'rise' ); ?></a>
+	<a class="u-sr-only" href="#main-content"><?php _e( 'Skip to content', 'rise' ); ?></a>
 
-	<header ole="banner">
+	<header role="banner" class="c-header c-header--site c-brand">
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-		<?php endif; ?>
+		<span class"l-row u-b">
+			<span class="l-container u-b">
+				<span class="l-col-3 u-b">
+					<h1 class="c-header__title c-brand__logo c-brand__logo--has-inner-link u-pos-rel">
+						<a class="u-absolute-fill u-block" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<span class="u-sr-only"><?php bloginfo('name'); ?></span>
+						</a>
+					</h1>
+				</span>
+
+				<?php if ( has_nav_menu( 'top' ) ) : ?>
+					<span class="l-col-9-last u-b">
+						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+					</span>
+				<?php endif; ?>
+			</span>
+		</span>
 
 	</header>

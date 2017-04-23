@@ -1,6 +1,572 @@
 /* ==========================================================================
 	style.scss
    ========================================================================== */
+/* ==========================================================================
+	 _settings.scss
+	 ========================================================================== */
+/* ==========================================================================
+	 _grid.scss
+	 ========================================================================== */
+/* ==========================================================================
+	 _mixins.scss
+	 ========================================================================== */
+/* ==========================================================================
+	 _layout.scss
+	 ========================================================================== */
+.l-container,
+.l-row,
+*[class^="l-col"] {
+  display: block;
+}
+
+.l-container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.l-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.l-hero {
+  height: 400px;
+}
+
+.l-col-1 {
+  width: 6.9348127601%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-1-last {
+  width: 6.9348127601%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-2 {
+  width: 15.3952843273%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-2-last {
+  width: 15.3952843273%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-3 {
+  width: 23.8557558946%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-3-last {
+  width: 23.8557558946%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-4 {
+  width: 32.3162274619%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-4-last {
+  width: 32.3162274619%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-5 {
+  width: 40.7766990291%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-5-last {
+  width: 40.7766990291%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-6 {
+  width: 49.2371705964%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-6-last {
+  width: 49.2371705964%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-7 {
+  width: 57.6976421637%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-7-last {
+  width: 57.6976421637%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-8 {
+  width: 66.1581137309%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-8-last {
+  width: 66.1581137309%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-9 {
+  width: 74.6185852982%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-9-last {
+  width: 74.6185852982%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-10 {
+  width: 83.0790568655%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-10-last {
+  width: 83.0790568655%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-11 {
+  width: 91.5395284327%;
+  float: left;
+  margin-right: 1.5256588072%;
+}
+
+.l-col-11-last {
+  width: 91.5395284327%;
+  float: right;
+  margin-right: 0;
+}
+
+.l-col-12 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.l-col-12-last {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-1 {
+    width: 6.9348127601%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-1-last {
+    width: 6.9348127601%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-2 {
+    width: 15.3952843273%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-2-last {
+    width: 15.3952843273%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-3 {
+    width: 23.8557558946%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-3-last {
+    width: 23.8557558946%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-4 {
+    width: 32.3162274619%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-4-last {
+    width: 32.3162274619%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-5 {
+    width: 40.7766990291%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-5-last {
+    width: 40.7766990291%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-6 {
+    width: 49.2371705964%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-6-last {
+    width: 49.2371705964%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-7 {
+    width: 57.6976421637%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-7-last {
+    width: 57.6976421637%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-8 {
+    width: 66.1581137309%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-8-last {
+    width: 66.1581137309%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-9 {
+    width: 74.6185852982%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-9-last {
+    width: 74.6185852982%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-10 {
+    width: 83.0790568655%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-10-last {
+    width: 83.0790568655%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-11 {
+    width: 91.5395284327%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-11-last {
+    width: 91.5395284327%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .l-col-sml-12-last {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-1 {
+    width: 6.9348127601%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-1-last {
+    width: 6.9348127601%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-2 {
+    width: 15.3952843273%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-2-last {
+    width: 15.3952843273%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-3 {
+    width: 23.8557558946%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-3-last {
+    width: 23.8557558946%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-4 {
+    width: 32.3162274619%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-4-last {
+    width: 32.3162274619%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-5 {
+    width: 40.7766990291%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-5-last {
+    width: 40.7766990291%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-6 {
+    width: 49.2371705964%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-6-last {
+    width: 49.2371705964%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-7 {
+    width: 57.6976421637%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-7-last {
+    width: 57.6976421637%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-8 {
+    width: 66.1581137309%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-8-last {
+    width: 66.1581137309%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-9 {
+    width: 74.6185852982%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-9-last {
+    width: 74.6185852982%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-10 {
+    width: 83.0790568655%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-10-last {
+    width: 83.0790568655%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-11 {
+    width: 91.5395284327%;
+    float: left;
+    margin-right: 1.5256588072%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-11-last {
+    width: 91.5395284327%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-12 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .l-col-med-12-last {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -411,5 +977,142 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+/* ==========================================================================
+	 _base.scss
+	 ========================================================================== */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+	 _nav.scss
+	 ========================================================================== */
+.c-navigation--top {
+  float: right;
+}
+
+.c-navigation--top a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.c-navigation--top a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+	 _menu.scss
+	 ========================================================================== */
+.c-menu > li {
+  list-style: none;
+}
+
+.c-menu--floats > li {
+  float: left;
+}
+
+.c-menu__item {
+  margin-right: 20px;
+}
+
+/* ==========================================================================
+	 _header.scss
+	 ========================================================================== */
+.c-header {
+  padding: 20px 0;
+  background-color: #0091d5;
+}
+
+.c-header__title {
+  margin: 0;
+}
+
+/* ==========================================================================
+   _footer.scss
+   ========================================================================== */
+/* ==========================================================================
+	 _brand.scss
+	 ========================================================================== */
+.c-brand__logo {
+  height: 58px;
+  width: 64px;
+  background-image: url(../media/img/rise_logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.c-brand__logo-link {
+  height: 100%;
+  width: 100%;
+}
+
+/* ==========================================================================
+	 _hero.scss
+	 ========================================================================== */
+.c-hero {
+  position: relative;
+}
+
+.c-hero__main {
+  text-align: center;
+}
+
+/* ==========================================================================
+	 _utils.scss
+	 ========================================================================== */
+.u-sr-only {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.u-b {
+  display: block;
+}
+
+.u-absolute-fill {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.u-pos-rel {
+  position: relative;
+}
+
+.u-clearfix:after,
+.l-container:after,
+.l-row:after,
+.c-menu--floats:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.u-abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */

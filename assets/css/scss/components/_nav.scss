@@ -1,0 +1,16 @@
+/* ==========================================================================
+	 _nav.scss
+	 ========================================================================== */
+
+.c-navigation--top {
+	float: right;
+}
+
+.c-navigation--top a {
+	color: map-get($colorsMap, 'white');
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
