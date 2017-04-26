@@ -31,6 +31,9 @@ add_action( 'after_setup_theme', 'rise_setup' );
  */
 function rise_scripts() {
 
+	// Google Fonts
+	wp_enqueue_style( 'custom-fonts', 'https://fonts.googleapis.com/css?family=Karla:400,700|Poppins:400,600' );
+
   // Theme stylesheet.
   wp_enqueue_style( 'rise-style', get_theme_file_uri() . '/assets/css/style.css' );
 

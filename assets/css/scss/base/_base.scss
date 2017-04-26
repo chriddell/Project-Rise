@@ -2,10 +2,20 @@
 	 _base.scss
 	 ========================================================================== */
 
+@if $fontSmoothing == true {
+	* {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
 body,
 html {
 	margin: 0;
 	padding: 0;
+
+	font-family: $mainFontFamily;
+	line-height: 1.35;
 }
 
 *,
@@ -18,4 +28,16 @@ h5 {
 	// Remove margin-top because it 
 	// tends to collapse
 	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $headingFontFamily;
+}
+
+p {
+	margin-bottom: 15px;
 }

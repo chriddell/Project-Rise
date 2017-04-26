@@ -982,10 +982,17 @@ template {
 /* ==========================================================================
 	 _base.scss
 	 ========================================================================== */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", "Calibri", "Helvetica", sans-serif;
+  line-height: 1.35;
 }
 
 *,
@@ -998,20 +1005,129 @@ h5 {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Karla", "Gotham", "Myriad Pro", "Tahoma", sans-serif;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+	 _hamburger.scss
+	 ========================================================================== */
+.c-hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter, opacity, filter;
+          transition-property: opacity, filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.c-hamburger:hover {
+  opacity: 0.7;
+}
+
+.c-hamburger__box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.c-hamburger__inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.c-hamburger__inner, .c-hamburger__inner:before, .c-hamburger__inner:after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.c-hamburger__inner:before, .c-hamburger__inner:after {
+  content: "";
+  display: block;
+}
+
+.c-hamburger__inner:before {
+  top: -10px;
+}
+
+.c-hamburger__inner:after {
+  bottom: -10px;
+}
+
+/* Boring
+---------------------------------------- */
+.c-hamburger--boring .c-hamburger__inner,
+.c-hamburger--boring .c-hamburger__inner::before,
+.c-hamburger--boring .c-hamburger__inner::after {
+  -webkit-transition-property: none;
+          transition-property: none;
+}
+
+.c-hamburger--boring.is-active .hamburger__inner {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-hamburger--boring.is-active .hamburger__inner:before {
+  top: 0;
+  opacity: 0;
+}
+
+.c-hamburger--boring.is-active .hamburger__inner:after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 /* ==========================================================================
 	 _nav.scss
 	 ========================================================================== */
-.c-navigation--top {
-  float: right;
+.c-nav {
+  width: 100%;
 }
 
-.c-navigation--top a {
+.c-nav a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.c-navigation--top a:hover {
+.c-nav a:hover {
   text-decoration: underline;
+}
+
+.c-nav__trigger {
+  float: right;
 }
 
 /* ==========================================================================
@@ -1114,5 +1230,11 @@ h5 {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (min-width: 767px) {
+  .u-mob-only {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

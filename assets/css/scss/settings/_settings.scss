@@ -16,3 +16,10 @@ $breakpointsMap: (
 	'tablet'	: 767px,
 	'desktop'	: 1025px,
 );
+
+// Fonts
+
+$mainFontFamily			: 'Poppins', 'Calibri', 'Helvetica', sans-serif;
+$headingFontFamily	: 'Karla', 'Gotham', 'Myriad Pro', 'Tahoma', sans-serif;
+
+$fontSmoothing			: true; // set to false to disable anti-aliased font rendering

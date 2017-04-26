@@ -2,15 +2,19 @@
 	 _nav.scss
 	 ========================================================================== */
 
-.c-navigation--top {
-	float: right;
+.c-nav {
+	width: 100%;
 }
 
-.c-navigation--top a {
+.c-nav a { // WP
 	color: map-get($colorsMap, 'white');
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.c-nav__trigger {
+	float: right;
 }

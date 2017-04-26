@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying 'contact' page content 
+ * in page-contact.php
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -18,6 +19,7 @@
 			<span class="l-col-12">
 				<?php
 				the_content(); ?>
+        <p>template-parts/page/content-contact-page.php</p>
 			</span>
 		</span>
 	</span>
