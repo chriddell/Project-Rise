@@ -2,6 +2,8 @@
 	 _hamburger.scss
 	 ========================================================================== */
 
+$linesColor: #FFFFFF;
+
 .c-hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -39,7 +41,7 @@
   &:after {
   	width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: $linesColor;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -71,7 +73,7 @@
   transition-property: none; 
 }
 
-.c-hamburger--boring.is-active .hamburger__inner {
+.c-hamburger--boring.is-active .c-hamburger__inner {
   transform: rotate(45deg); 
 
   &:before {

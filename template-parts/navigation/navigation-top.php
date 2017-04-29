@@ -12,7 +12,7 @@
 
 <nav class="c-nav" id="main-nav" role="navigation" aria-label="<?php _e( 'Top Menu', 'rise' ); ?>">
 
-	<button type="button" class="c-nav__trigger c-hamburger c-hamburger--boring u-mob-only" aria-controls="top-menu" aria-expanded="false">
+	<button type="button" class="c-nav__trigger c-hamburger c-hamburger--boring u-mob-only" aria-controls="top-menu" aria-expanded="false" id="nav-trigger">
 	  <span class="c-hamburger__box">
 	    <span class="c-hamburger__inner"></span>
 	  </span>
@@ -22,8 +22,8 @@
 	<?php 
 	wp_nav_menu( array(
 		'theme_location' 	=> 'top',
-		'menu_id'        	=> 'main-nav-menu',
+		'menu_id'        	=> 'nav-menu',
 		'container'				=> false,
-		'menu_class'			=> 'c-menu c-menu--floats'
+		'menu_class'			=> 'c-menu'
 	) ); ?>
 </nav>

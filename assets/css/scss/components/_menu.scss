@@ -2,18 +2,68 @@
 	 _menu.scss
 	 ========================================================================== */
 
-.c-menu > li {
-  list-style: none;
-}
+.c-menu {
+	width: 100%;
+	max-height: 0;
 
-.c-menu--floats {
-  @extend %u-clearfix;
+	padding: 0;
+	margin: 0;
 
-  > li {
-    float: left;
-  }
+	position: fixed;
+
+	left: 0;
+	top: 100px;
+
+	z-index: 2;
+	overflow: hidden;
+
+	background-color: map-get( $colorsMap, 'three' );
+
+	@extend %u-clearfix;
+
+	@include respond-to( 'tablet' ) {
+		max-height: none;
+		width: auto;
+
+		border-top: none;
+
+		float: right;
+
+		position: static;
+	}
+
+	&.is-active {
+		max-height: 400px;
+	}
 }
 
 .c-menu__item {
-  margin-right: 20px;
+  border-bottom: 1px solid map-get( $colorsMap, 'white' );
+
+  list-style: none;
+
+  @include respond-to( 'tablet' ) {
+  	margin-right: 20px;
+  	border-bottom: none;
+
+  	float: left;
+  }
+
+  &:first-of-type {
+  	border-top: 1px solid map-get( $colorsMap, 'white' );
+
+  	@include respond-to( 'tablet' ) {
+  		border-top: none;
+  	}
+  }
+
+  > a { // WP
+  	padding: 10px 20px; // replicate .l-wrapper with side-padding
+
+  	display: block;
+
+  	@include respond-to( 'tablet' ) {
+  		padding: 0;
+  	}
+  }
 }

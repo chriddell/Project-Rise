@@ -1059,7 +1059,7 @@ p {
 .c-hamburger__inner, .c-hamburger__inner:before, .c-hamburger__inner:after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #FFFFFF;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
@@ -1092,18 +1092,18 @@ p {
           transition-property: none;
 }
 
-.c-hamburger--boring.is-active .hamburger__inner {
+.c-hamburger--boring.is-active .c-hamburger__inner {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.c-hamburger--boring.is-active .hamburger__inner:before {
+.c-hamburger--boring.is-active .c-hamburger__inner:before {
   top: 0;
   opacity: 0;
 }
 
-.c-hamburger--boring.is-active .hamburger__inner:after {
+.c-hamburger--boring.is-active .c-hamburger__inner:after {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -1133,16 +1133,65 @@ p {
 /* ==========================================================================
 	 _menu.scss
 	 ========================================================================== */
-.c-menu > li {
-  list-style: none;
+.c-menu {
+  width: 100%;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #0091d5;
 }
 
-.c-menu--floats > li {
-  float: left;
+@media (min-width: 767px) {
+  .c-menu {
+    max-height: none;
+    width: auto;
+    border-top: none;
+    float: right;
+    position: static;
+  }
+}
+
+.c-menu.is-active {
+  max-height: 400px;
 }
 
 .c-menu__item {
-  margin-right: 20px;
+  border-bottom: 1px solid #ffffff;
+  list-style: none;
+}
+
+@media (min-width: 767px) {
+  .c-menu__item {
+    margin-right: 20px;
+    border-bottom: none;
+    float: left;
+  }
+}
+
+.c-menu__item:first-of-type {
+  border-top: 1px solid #ffffff;
+}
+
+@media (min-width: 767px) {
+  .c-menu__item:first-of-type {
+    border-top: none;
+  }
+}
+
+.c-menu__item > a {
+  padding: 10px 20px;
+  display: block;
+}
+
+@media (min-width: 767px) {
+  .c-menu__item > a {
+    padding: 0;
+  }
 }
 
 /* ==========================================================================
@@ -1169,6 +1218,13 @@ p {
   background-image: url(../media/img/rise_logo.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+@media (min-width: 767px) {
+  .c-brand__logo {
+    height: 58px;
+    width: 64px;
+  }
 }
 
 .c-brand__logo-link {
@@ -1217,7 +1273,7 @@ p {
 .u-clearfix:after,
 .l-container:after,
 .l-row:after,
-.c-menu--floats:after {
+.c-menu:after {
   content: "";
   display: table;
   clear: both;
@@ -1236,5 +1292,16 @@ p {
   .u-mob-only {
     display: none;
   }
+}
+
+.u-list-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.u-no-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
