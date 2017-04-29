@@ -12,7 +12,7 @@
 
 ?>
 
-<div class="c-page__main">
+<div class="c-page__main" id="main-content">
 	<span class="l-row">
 		<span class="l-container">
 			<span class="l-col-12">

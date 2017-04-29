@@ -1,0 +1,17 @@
+/* ==========================================================================
+	 _buttons.scss
+	 ========================================================================== */
+
+.c-btn {
+	padding: 18px 24px;
+
+	border: 3px solid map-get( $colorsMap, 'white' );
+	border-radius: 4px;
+
+	color: map-get( $colorsMap, 'white' );
+
+	font-family: $headingFontFamily;
+	text-decoration: none;
+
+	cursor: pointer;
+}

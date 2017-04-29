@@ -21,6 +21,8 @@
 
 .l-hero {
   height: 400px;
+  height: calc( 100vh - 100px ); // for clever browsers 
+  max-height: 1024px;
 }
 
 // Generate grid classes
@@ -34,6 +36,10 @@
 
   .l-col-#{$i}-last {
     @include span( last $i );
+  }
+  
+  .l-push-#{$i} {
+    @include push( $i );
   }
 }
 
@@ -49,6 +55,12 @@
       @include span( last $i );
     }
   }
+
+  .l-push-sml-#{$i} {
+    @include respond-to( 'tablet' ) {
+      @include push( $i );
+    }
+  }
 }
 
 @for $i from 1 through map-get( $susy, columns ) {
@@ -61,6 +73,12 @@
   .l-col-med-#{$i}-last {
     @include respond-to( 'desktop' ) {
       @include span( last $i );
+    }
+  }
+
+  .l-push-med-#{$i} {
+    @include respond-to( 'desktop' ) {
+      @include push( $i );
     }
   }
 }

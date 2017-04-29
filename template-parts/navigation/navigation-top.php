@@ -10,7 +10,7 @@
 
 ?>
 
-<nav class="c-nav" id="main-nav" role="navigation" aria-label="<?php _e( 'Top Menu', 'rise' ); ?>">
+<nav class="c-nav u-clearfix" id="main-nav" role="navigation" aria-label="<?php _e( 'Top Menu', 'rise' ); ?>">
 
 	<button type="button" class="c-nav__trigger c-hamburger c-hamburger--boring u-mob-only" aria-controls="top-menu" aria-expanded="false" id="nav-trigger">
 	  <span class="c-hamburger__box">

@@ -3,9 +3,40 @@
 	 ========================================================================== */
 
 .c-hero {
+	width: 100%;
+
+	display: table;
+
 	position: relative;
+
+	@include cover-background();
 }
 
 .c-hero__main {
+	padding: 0 20px;
+
+	display: table-cell;
+	vertical-align: middle;
+
 	text-align: center;
+}
+
+.c-hero__title {
+	max-width: 450px;
+
+	margin: 0 auto;
+
+	color: map-get( $colorsMap, 'white' );
+
+	position: relative;
+	top: -40px;
+}
+
+.c-hero__btn {
+	position: absolute;
+
+	bottom: 45px;
+	left: 50%; // center align
+
+	transform: translateX(-50%); // center align
 }

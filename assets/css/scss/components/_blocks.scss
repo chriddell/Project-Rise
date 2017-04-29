@@ -1,0 +1,35 @@
+/* ==========================================================================
+	 _blocks.scss
+	 ========================================================================== */
+
+.c-block {
+
+}
+
+.c-block__title {
+	font-size: 21px;
+}
+
+
+// Alternate colors on titles
+// depending on location
+// in sequence
+
+$titleColorsMap: (
+	1: map-get($colorsMap, one),
+	2: map-get($colorsMap, two),
+	3: map-get($colorsMap, three),
+	4: map-get($colorsMap, four),
+);
+
+@each $n, $color in $titleColorsMap {
+	.c-block:nth-of-type( #{$n}n ) .c-block__title {
+		color: $color;
+	}
+}
+
+// Trumps
+
+.c-block:nth-of-type(4) {
+	clear: both;
+}

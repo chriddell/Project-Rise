@@ -4,6 +4,12 @@
 
 .c-nav {
 	width: 100%;
+
+	@include respond-to( 'tablet' ) {
+		position: relative;
+
+		top: 20px;
+	}
 }
 
 .c-nav a { // WP
