@@ -48,3 +48,12 @@ h5 {
 p {
 	margin-bottom: 15px;
 }
+
+a {
+	text-decoration: underline;
+	color: map-get( $colorsMap, 'dark' );
+
+	&:visited {
+		color: lighten( map-get( $colorsMap, 'dark' ), 40% );		
+	}
+}

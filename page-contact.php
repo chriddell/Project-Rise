@@ -17,9 +17,8 @@ get_header(); ?>
 		<span class="l-row">
 			<span class="l-container">
 				<span class="l-col-12">
-					<?php 
-					the_title( '<h1 class="c-page__title">', '</h1>' ); 
-					the_field( 'acf_page_description' ); ?>
+					<?php  the_title( '<h1 class="c-page__title">', '</h1>' ); ?>
+					<span class="c-page__description u-b"><?php the_field( 'acf_page_description' ); ?></span>
 				</span>
 			</span><!-- / .l-container -->
 		</span><!-- / .l-row -->

@@ -3,6 +3,8 @@
 	 ========================================================================== */
 
 .c-header {
+	height: 100px;
+	
 	padding: 20px 0;
 
 	background-color: map-get( $colorsMap, 'three' );

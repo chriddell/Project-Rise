@@ -2,10 +2,30 @@
 	 _page.scss
 	 ========================================================================== */
 
+.c-page__header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	background-color: map-get( $colorsMap, 'three' );
+
+	color: map-get( $colorsMap, 'white' );
+}
+
 .c-page__main {
 	padding-top: 35px;
 
-	@include respond-to( 'tablet' ) {
-		padding-top: 70px;
+	&:focus {
+		outline: none;
+	}
+}
+
+.c-page__title {
+	margin-bottom: 0;
+}
+
+.c-page__description {
+
+	> p { // WP WYSIWYG
+		margin-bottom: 0;
 	}
 }

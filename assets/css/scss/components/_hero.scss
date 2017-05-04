@@ -9,6 +9,8 @@
 
 	position: relative;
 
+	transition: height 0.75s;
+
 	@include cover-background();
 }
 

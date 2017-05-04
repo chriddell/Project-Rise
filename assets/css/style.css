@@ -1216,10 +1216,20 @@ p {
   margin-bottom: 15px;
 }
 
+a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+a:visited {
+  color: #666666;
+}
+
 /* ==========================================================================
 	 _buttons.scss
 	 ========================================================================== */
-.c-btn {
+.c-btn,
+.c-btn:visited {
   padding: 18px 24px;
   border: 3px solid #ffffff;
   border-radius: 4px;
@@ -1227,6 +1237,13 @@ p {
   font-family: "Karla", "Gotham", "Myriad Pro", "Tahoma", sans-serif;
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+          transition: background-color 0.25s;
+}
+
+.c-btn:hover,
+.c-btn:visited:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ==========================================================================
@@ -1417,6 +1434,7 @@ p {
 	 _header.scss
 	 ========================================================================== */
 .c-header {
+  height: 100px;
   padding: 20px 0;
   background-color: #0091d5;
 }
@@ -1458,6 +1476,8 @@ p {
   width: 100%;
   display: table;
   position: relative;
+  -webkit-transition: height 0.75s;
+          transition: height 0.75s;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1517,14 +1537,91 @@ p {
 /* ==========================================================================
 	 _page.scss
 	 ========================================================================== */
+.c-page__header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #0091d5;
+  color: #ffffff;
+}
+
 .c-page__main {
   padding-top: 35px;
 }
 
+.c-page__main:focus {
+  outline: none;
+}
+
+.c-page__title {
+  margin-bottom: 0;
+}
+
+.c-page__description > p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   _bio.scss
+   ========================================================================== */
+.c-bio {
+  margin-bottom: 20px;
+}
+
+.c-bio:last-of-type {
+  margin-bottom: 0;
+}
+
 @media (min-width: 767px) {
-  .c-page__main {
-    padding-top: 70px;
+  .c-bio:last-of-type {
+    margin-bottom: 20px;
   }
+}
+
+@media (min-width: 1025px) {
+  .c-bio:nth-of-type(4) {
+    clear: both;
+  }
+}
+
+.c-bio__title {
+  margin-bottom: 15px;
+  font-family: "Poppins", "Calibri", "Helvetica", sans-serif;
+}
+
+.c-bio__image-container {
+  height: 96px;
+  width: 96px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: #f5886b;
+  overflow: hidden;
+}
+
+.c-bio__image-container:after {
+  content: '?';
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.c-bio__image {
+  height: 100%;
+  z-index: 2;
+}
+
+.c-bio__image[src*='unknown'] {
+  display: none;
+}
+
+.c-bio__link {
+  margin-right: 5px;
+  display: block;
+  float: left;
+}
+
+.c-bio__link:not(:last-of-type):after {
+  content: '\00a0/';
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* ==========================================================================
@@ -1563,7 +1660,8 @@ p {
   clear: both;
 }
 
-.u-abs-center {
+.u-abs-center,
+.c-bio__image-container:after {
   position: absolute;
   top: 50%;
   left: 50%;

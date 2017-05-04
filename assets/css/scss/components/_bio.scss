@@ -1,0 +1,76 @@
+/* ==========================================================================
+   _bio.scss
+   ========================================================================== */
+
+.c-bio {
+	margin-bottom: 20px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+
+		@include respond-to( 'tablet' ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&:nth-of-type(4) {
+		@include respond-to( 'desktop' ) {
+			clear: both;
+		}
+	}
+}
+
+.c-bio__title {
+	margin-bottom: 15px;
+
+	font-family: $mainFontFamily;
+}
+
+.c-bio__image-container {
+	height: 96px;
+	width: 96px;
+
+	margin-bottom: 20px;
+
+	border-radius: 50%;
+
+	background-color: map-get( $colorsMap, 'one' );
+
+	overflow: hidden;
+
+	&:after {
+		content: '?';
+
+		color: map-get( $colorsMap, 'white' );
+
+		font-size: 24px;
+
+		@extend %u-abs-center;
+	}
+}
+
+.c-bio__image {
+	height: 100%;
+
+	z-index: 2;
+
+	&[src*='unknown'] {
+		display: none;
+	}
+}
+
+.c-bio__link {
+	margin-right: 5px;
+
+	display: block;
+
+	float: left;
+
+	&:not(:last-of-type):after {
+		content: '\00a0/';
+
+		display: inline-block;
+
+		text-decoration: none;
+	}
+}
