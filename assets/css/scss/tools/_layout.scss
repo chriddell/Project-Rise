@@ -17,6 +17,10 @@
 	@include container;
 
 	padding: 0 20px;
+
+  @include respond-to( 'large-desktop' ) {
+    max-width: 1352px;
+  }
 }
 
 .l-hero {

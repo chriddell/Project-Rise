@@ -40,7 +40,10 @@ module.exports = function( grunt ) {
       lib: {
         files: [{
           cwd: './',
-          src: 'js/lib/*.js',
+          src: [
+            'js/lib/*.js',
+            '!js/lib/modernizr-3.5.0.min.js'
+          ],
           dest: './js/lib/built/lib.min.js'
         }],
         options: {

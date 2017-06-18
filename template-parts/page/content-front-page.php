@@ -45,9 +45,11 @@ if ( have_rows( $text_blocks_identifier ) ) : $i = 1; ?>
 					switch( $i ) :
 						case $i % 3 == 0: ?>
 
-							<div class="c-block l-col-12 l-col-sml-4-last">
+							<div class="c-block l-col-9 l-col-sml-3-last">
 								<span class="c-block__container">
-									<?php printf( '<h2 class="c-block__title">%s</h2>', $text_block_title ); ?>
+									<?php if ( $text_block_title ) : ?>
+										<?php printf( '<h2 class="c-block__title">%s</h2>', $text_block_title ); ?>
+									<?php endif; ?>
 									<span class="c-block__main u-b">
 										<?php	echo $text_block_main; ?>
 									</span>
@@ -56,22 +58,9 @@ if ( have_rows( $text_blocks_identifier ) ) : $i = 1; ?>
 
 						<?php
 							break;
-						case $i == 5: ?>
-
-							<div class="c-block l-col-12 l-col-sml-8-last">
-								<span class="c-block__container">
-									<?php printf( '<h2 class="c-block__title">%s</h2>', $text_block_title ); ?>
-									<span class="c-block__main u-b">
-										<?php echo $text_block_main; ?>
-									</span>
-								</span>
-							</div>
-
-						<?php
-							break;
 						default: ?>
 
-							<div class="c-block l-col-12 l-col-sml-4">
+							<div class="c-block l-col-9 l-col-sml-3">
 								<span class="c-block__container">
 									<?php printf( '<h2 class="c-block__title">%s</h2>', $text_block_title ); ?>
 									<span class="c-block__main u-b">

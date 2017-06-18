@@ -54,6 +54,8 @@
 %u-list-reset {
 	margin: 0;
 	padding: 0;
+
+	list-style: none;
 }
 
 .u-no-scroll,
@@ -67,4 +69,14 @@
 .u-weight-normal,
 %u-weight-normal {
 	font-weight: normal;
+}
+
+.u-white,
+%u-white {
+	color: map-get( $colorsMap, 'white' );
+}
+
+.u-bold,
+%u-bold {
+	font-weight: bold;
 }

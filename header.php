@@ -29,7 +29,7 @@
 
 		<span class"l-row u-b">
 			<span class="l-container u-b">
-				<span class="l-col-3 u-b">
+				<span class="l-col-2 u-b">
 					<h1 class="c-header__title c-brand__logo c-brand__logo--has-inner-link u-pos-rel">
 						<a class="u-absolute-fill u-block" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<span class="u-sr-only"><?php bloginfo('name'); ?></span>
@@ -38,7 +38,7 @@
 				</span>
 
 				<?php if ( has_nav_menu( 'top' ) ) : ?>
-					<span class="l-col-9-last u-b">
+					<span class="l-col-7-last u-b">
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</span>
 				<?php endif; ?>

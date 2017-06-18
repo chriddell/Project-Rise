@@ -1,0 +1,136 @@
+/* ==========================================================================
+	 _gravityforms.scss
+	 ========================================================================== */
+
+.gform_fields {
+	@extend %u-list-reset;
+}
+
+.gfield {
+	margin-bottom: 10px;
+}
+
+.gfield_label {
+	@extend %u-bold;
+}
+
+// Fieldtypes
+
+.gfield--text input,
+.gfield--textarea textarea {
+	border: none;
+
+	font-size: 16px;
+	font-family: $mainFontFamily;
+
+	background-color: transparent;
+	color: map-get( $colorsMap, 'dark' );
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+// Text fieldtype
+
+.gfield--text {
+	width: 100%;
+
+	padding: 2px 4px;
+
+	border-bottom: 1px solid map-get( $colorsMap, 'dark' );
+
+	display: table;
+
+	@extend	%u-clearfix;
+}
+
+.gfield--text .gfield_label,
+.gfield--text .ginput_container {
+	display: table-cell;
+}
+
+.gfield--text .gfield_label {
+	width: 10%;
+
+	margin-right: 5px;
+}
+
+.gfield--text input {
+	width: 100%;
+
+	padding-left: 5px;
+}
+
+// Textarea fieldtype
+
+.gfield--textarea {
+	padding-top: 10px;
+}
+
+.gfield--textarea .gfield_label {
+	padding: 2px 4px;
+
+	display: block;
+}
+
+.gfield--textarea textarea {
+	width: 100%;
+	max-width: 100%; // constrain to parent if user stretches
+	height: 150px;
+
+	padding: 10px;
+
+	border: 1px solid map-get( $colorsMap, 'dark' );
+	border-radius: 4px;
+}
+
+// Error messages
+
+.gfield_error {
+	border-bottom-color: #CC0000 !important;
+}
+
+.validation_error {
+	margin-bottom: 15px;
+
+	font-family: $headingFontFamily;
+
+	@extend %u-bold;
+}
+
+.validation_message {
+	@extend %u-sr-only;
+}
+
+// Submit
+
+.gform_button {
+	width: 100%;
+
+	padding: 5px 10px;
+	border: 0;
+	border-radius: 4px;
+
+	font-size: 16px;
+	font-family: $mainFontFamily;
+
+	background-color: map-get( $colorsMap, 'four' );
+	color: map-get( $colorsMap, 'white' );
+
+	cursor: pointer;
+
+	.no-touchevents &:hover {
+		background-color: darken( map-get( $colorsMap, 'four' ), 5% );
+	}
+
+	@include respond-to( 'tablet' ) {
+		width: 175px;
+	}
+}
+
+// Misc.
+
+.gfield_required {
+	@extend %u-sr-only;
+}

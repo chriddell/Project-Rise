@@ -11,12 +11,15 @@
  * @version 1.0
  */
 
+// ACF: Header/Footer colour
+$acf_hex = get_field( 'acf_page_color' );
+
 get_header(); ?>
 	
-	<header class="c-page__header">
+	<header class="c-page__header" style="background-color: <?php echo $acf_hex; ?>">
 		<span class="l-row">
 			<span class="l-container">
-				<span class="l-col-12">
+				<span class="l-col-9">
 					<?php  the_title( '<h1 class="c-page__title">', '</h1>' ); ?>
 					<span class="c-page__description u-b"><?php the_field( 'acf_page_description' ); ?></span>
 				</span>

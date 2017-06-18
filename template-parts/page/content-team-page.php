@@ -19,7 +19,7 @@ $team_member_identifier 	= 'acf_team_member_repeater';
 <div class="c-page__main">
 	<span class="l-row">
 		<span class="l-container">
-			<span class="l-col-12">
+			<span class="l-col-9">
 				<?php 
 				// Loop ACF repeater
 				if ( have_rows( $team_member_identifier ) ) : 
@@ -31,9 +31,12 @@ $team_member_identifier 	= 'acf_team_member_repeater';
 
 						<?php
 						// ACF: Get photo sub-field 
-						$team_member_photo = get_sub_field( 'acf_team_member_photo' ); ?>
+						$team_member_photo = get_sub_field( 'acf_team_member_photo' ); 
 
-						<div class="c-bio l-col-12 l-col-sml-6<?php if ( $i % 2 == 0 ) : ?>-last<?php endif; ?> l-col-med-4<?php if ( $i % 3 == 0 ) : ?>-last<?php endif; ?>">
+						// Handy grid classes
+						$is_last_sml = ( $i % 3 == 0 ) ? '-last' : false; ?>
+
+						<div class="c-bio l-col-12 l-col-sml-3<?php echo $is_last_sml; ?>">
 
 								<span class="c-bio__image-container u-b u-pos-rel">
 									<?php if ( $team_member_photo ) : ?>

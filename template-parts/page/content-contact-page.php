@@ -16,10 +16,16 @@
 <div class="c-page__main">
 	<span class="l-row">
 		<span class="l-container">
-			<span class="l-col-12">
+			<span class="l-col-9 l-col-med-4">
 				<?php
 				the_content(); ?>
-        <p>template-parts/page/content-contact-page.php</p>
+			</span>
+			<span class="l-col-med-4-last">
+				<?php if ( has_nav_menu( 'social' ) ) : ?>
+					<span class="l-col-7-last u-b">
+						<?php get_template_part( 'template-parts/navigation/social' ); ?>
+					</span>
+				<?php endif; ?>
 			</span>
 		</span>
 	</span>

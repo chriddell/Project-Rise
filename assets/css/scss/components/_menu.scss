@@ -14,10 +14,10 @@
 	left: 0;
 	top: 100px;
 
-	z-index: 2;
+	z-index: 999;
 	overflow: hidden;
 
-	background-color: map-get( $colorsMap, 'three' );
+	background-color: map-get( $colorsMap, 'one' );
 
 	@extend %u-clearfix;
 
@@ -30,6 +30,8 @@
 		float: right;
 
 		position: static;
+
+		overflow: visible;
 	}
 
 	&.is-active {

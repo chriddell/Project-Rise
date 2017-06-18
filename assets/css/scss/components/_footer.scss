@@ -1,3 +1,78 @@
 /* ==========================================================================
    _footer.scss
    ========================================================================== */
+
+.c-footer {
+	padding: 60px 0;
+
+	background-color: map-get( $colorsMap, 'one' );
+	color: map-get( $colorsMap, 'white' );
+}
+
+.c-footer__block {
+	margin-bottom: 25px;
+}
+
+.c-footer__title {
+	margin-bottom: 15px;
+
+	font-size: 24px;
+}
+
+.c-footer__menu-item {
+	margin-bottom: 3px;
+}
+
+.c-footer__menu-link {
+	padding: 0 1px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid map-get( $colorsMap, 'white' );
+
+	display: inline-block;
+
+	line-height: 1.1;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.c-footer__link,
+.c-footer__link:visited {
+	@extend %u-white;
+}
+
+.c-footer__promotion {
+	margin-top: 25px;
+
+	clear: both;
+
+	font-size: 14px;
+
+	opacity: 0.6;
+}
+
+// Forms
+
+.c-footer .c-form {
+	margin-bottom: 25px;
+}
+
+.c-footer .gfield--text {
+	border-bottom: 1px solid map-get( $colorsMap, 'white' );
+}
+
+.c-footer input::placeholder,
+.c-footer textarea::placeholder {
+	color: rgba( map-get( $colorsMap, 'white' ), 0.75 );
+}
+
+.c-footer .gfield--text input,
+.c-footer .gfield--textarea textarea {
+	color: map-get( $colorsMap, 'white' );
+}
+
+.c-footer .gfield--textarea textarea {
+	border: 1px solid map-get( $colorsMap, 'white' );
+}

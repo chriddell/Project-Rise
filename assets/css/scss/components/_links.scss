@@ -1,0 +1,91 @@
+/* ==========================================================================
+	 _links.scss
+	 ========================================================================== */
+
+.c-block-link {
+	position: relative;
+	z-index: 2;
+
+	transition: color 0.15s 0.1s ease-in;
+
+	&:after {
+		content: '';
+
+		height: 102%;
+		// width: calc( 100% + 6px );
+		width: 0;
+
+		position: absolute;
+		left: -3px;
+		top: -1%;
+		z-index: -1;
+
+		background-color: transparent;
+
+		transition: width 0.5s, background-color 0.25s;
+	}
+
+	.no-touchevents &:hover {
+		color: map-get( $colorsMap, 'white' );
+
+		&:after {
+			width: calc( 100% + 6px );
+
+			background-color: map-get( $colorsMap, 'dark' );
+		}
+	}
+}
+
+// Loop our brand colours to create
+// clasess
+@each $colorName, $colorHex in $colorsMap {
+	.no-touchevents .c-block-link--#{$colorName}:hover:after {
+		background-color: $colorHex;
+	}
+}
+
+.c-line-link {
+	position: relative;
+
+	&:after {
+		content: '';
+
+		height: 1px;
+		width: calc( 100% + 6px );
+
+		position: absolute;
+		left: -3px;
+		bottom: -2px;
+
+		transform: scale(0);
+		transform-origin: left;
+
+		transition: transform 0.45s;
+	}
+
+	&:hover:after {
+		transform: scale(1);
+	}
+
+	// @trump:
+	// ensure this and any child links (e.g. 
+	// when class cannot be appiled to <a> directly)
+	&,
+	& a
+	&:hover,
+	& a:hover {
+		text-decoration: none;
+	}
+}
+
+@each $colorName, $colorHex in $colorsMap {
+	.no-touchevents .c-line-link--#{$colorName}:after {
+		background-color: $colorHex;
+	}
+}
+
+.c-footer .c-line-link {
+	&:after {
+		bottom: 0;
+	}
+}
